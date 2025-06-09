@@ -93,7 +93,7 @@ public class DbService : IDbService
             
             // Ensure all racers are found
             var racersFoundAmount = await _context.Racers.Where(e => racersIds.Contains(e.Id)).CountAsync();
-            if (racersFoundAmount != racersIds.Count())
+            if (racersFoundAmount != racersIds.Count)
                 throw new BadRequestException("Some of the racers are not present in the database.");
             
             // Find the proper TrackRace
