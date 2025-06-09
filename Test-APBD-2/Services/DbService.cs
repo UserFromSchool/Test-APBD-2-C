@@ -129,7 +129,7 @@ public class DbService : IDbService
             {
                 betterTime = request.Participations
                     .Select(e => e.FinishTimeInSeconds)
-                    .Max();
+                    .Min();
             }
             else
             {
@@ -140,7 +140,7 @@ public class DbService : IDbService
                 {
                     betterTime = foundBetterTimes
                         .Select(e => e.FinishTimeInSeconds)
-                        .Max();
+                        .Min();
                 }
             }
             
