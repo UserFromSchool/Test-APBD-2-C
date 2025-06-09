@@ -40,7 +40,7 @@ public class DatabaseContext : DbContext
         modelBuilder.Entity<TrackRace>().HasData(new List<TrackRace>
         {
             new TrackRace { Id = 1, RaceId = 1, TrackId = 1, Laps = 50, BestTimeInSeconds = 6000 },
-            new TrackRace { Id = 2, RaceId = 2, TrackId = 1, Laps = 100, BestTimeInSeconds = 4567 }
+            new TrackRace { Id = 2, RaceId = 2, TrackId = 2, Laps = 100, BestTimeInSeconds = 4567 }
         });
         
         modelBuilder.Entity<RaceParticipation>().HasData(new List<RaceParticipation>
