@@ -32,6 +32,11 @@ public class DbService : IDbService
         // Check if racer was found
         if (racer is null)
             throw new NotFoundException($"Couldn't find the racer with id {idRacer}.");
+
+        foreach (var racerRaceParticipation in racer.RaceParticipations)
+        {
+            Console.WriteLine(racerRaceParticipation.TrackRace.BestTimeInSeconds);
+        }
         
         // Return the information
         return new RacerRaceParticipationsInfoDTO
